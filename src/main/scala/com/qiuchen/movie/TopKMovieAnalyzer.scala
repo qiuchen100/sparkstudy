@@ -25,10 +25,21 @@ object TopKMovieAnalyzer extends App {
   /**
     * Step 3: 得分最高的10部电影
     */
+  println("--------------------得分最高的10部电影--------------------------------")
   val topKMovieScore = ratings.map(x => (x._2, (x._3.toInt, 1)))
                               .reduceByKey((v1, v2) => (v1._1 + v2._1, v1._2 + v2._2))
                               .map(x => (x._1, x._2._1.toFloat / x._2._2.toFloat))
                               .sortBy(x => x._2, false)
                               .take(10)
                               .foreach(println)
+
+  /**
+    * Step 4: 看过电影最多的前10个人
+    */
+  println("--------------------看过电影最多的前10个人--------------------------------")
+  val topKMoviePerson = ratings.map(x => (x._1, 1))
+    .reduceByKey(_ + _)
+    .sortBy(x => x._2, false)
+    .take(10)
+    .foreach(println)
 }
