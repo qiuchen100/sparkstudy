@@ -27,11 +27,4 @@
       <version>2.1.1</version>
     </dependency>
   </dependencies>
-  <build>
-    <sourceDirectory>D:\work\scala\idea\sparkstudy\src\main\scala</sourceDirectory>
-    <scriptSourceDirectory>D:\work\scala\idea\sparkstudy\src\main\scripts</scriptSourceDirectory>
-    <testSourceDirectory>D:\work\scala\idea\sparkstudy\src\test\scala</testSourceDirectory>
-    <outputDirectory>D:\work\scala\idea\sparkstudy\target\classes</outputDirectory>
-    <testOutputDirectory>D:\work\scala\idea\sparkstudy\target\test-classes</testOutputDirectory>
-  </build>
 </project>
