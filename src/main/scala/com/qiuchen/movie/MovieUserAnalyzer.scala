@@ -1,6 +1,5 @@
 package com.qiuchen.movie
 
-import com.qiuchen.movie.MovieUserAnalyzer.ratings
 import org.apache.spark._
 /**
   * 看过“Lord of the Rings, The (1978)”用户和年龄性别分布
